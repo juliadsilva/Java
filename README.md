@@ -1,2 +1,13 @@
 # Java
-Repository created for learning the java language
+This repository aims to store exercises Object-oriented programming (OOP). The programming language used is Java.
+
+----
+
+## The exercises includes topics like:
+
+- Array
+
+---
+
+#### Contact information:
+E-mail: juliadaniele@gec.inatel.br
