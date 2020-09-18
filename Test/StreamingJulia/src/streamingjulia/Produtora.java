@@ -3,15 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package pcmania;
+package streamingjulia;
 
 /**
  *
  * @author julia
  */
-public class SistemaOperacional {
-
-    String nome;
-    int tipo;
-
+public class Produtora {
+    
+    public String nome;
+    public String diretor;
 }

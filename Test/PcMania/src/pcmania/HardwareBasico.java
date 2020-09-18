@@ -10,7 +10,7 @@ package pcmania;
  * @author julia
  */
 public class HardwareBasico {
-    
+
     String nome;
     float capacidade;
 
@@ -18,4 +18,5 @@ public class HardwareBasico {
         this.nome = nome;
         this.capacidade = capacidade;
     }
+     
 }
