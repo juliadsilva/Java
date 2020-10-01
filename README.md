@@ -6,6 +6,7 @@ This repository aims to store exercises Object-oriented programming (OOP). The p
 ## The exercises includes topics like:
 
 - Array
+- Theads
 
 ---
 
