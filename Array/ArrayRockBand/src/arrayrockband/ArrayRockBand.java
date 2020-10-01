@@ -46,6 +46,7 @@ public class ArrayRockBand {
         band.empresario = emp;
         band.musicos = musico_aux;
         band.musicas = musicas_aux;
+        
         band.mostraInfosBanda();
     }
 }
