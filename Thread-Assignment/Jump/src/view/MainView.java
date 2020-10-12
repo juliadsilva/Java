@@ -9,14 +9,18 @@ import java.util.Random;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
+import javax.swing.JTable;
 import model.Cat;
 
 /**
  *
- * @author Administrador
+ * @author Julia
+ * https://github.com/juliadsilva
  */
+
 public class MainView extends javax.swing.JFrame {
 
+    //Numero maximo de gatos que podem ser criados
     private int MAX_CAT_NUMBER = 5;
     private int catCounter = 0;
 
@@ -24,9 +28,8 @@ public class MainView extends javax.swing.JFrame {
      * Creates new form MainView
      */
     public MainView() {
-        super();
         initComponents();
-        this.setTitle("Jump of the cat do javinha");
+        this.setTitle("Jump of The Cat");
         this.repaint();
     }
 
@@ -41,13 +44,14 @@ public class MainView extends javax.swing.JFrame {
 
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
-        bgImagePanel = new javax.swing.JPanel();
-        bgImageLabel = new javax.swing.JLabel();
         ctrlPanel = new javax.swing.JPanel();
         titleLabel = new javax.swing.JLabel();
         addCatButton = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         catTable = new javax.swing.JTable();
+        jsair = new javax.swing.JButton();
+        bgImagePanel = new javax.swing.JPanel();
+        bgImageLabel = new javax.swing.JLabel();
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -63,38 +67,34 @@ public class MainView extends javax.swing.JFrame {
         jScrollPane1.setViewportView(jTable1);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setBackground(new java.awt.Color(0, 0, 0));
+        setAlwaysOnTop(true);
+        setBackground(new java.awt.Color(255, 204, 204));
 
-        bgImagePanel.setBackground(new java.awt.Color(255, 255, 255));
-        bgImagePanel.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-
-        javax.swing.GroupLayout bgImagePanelLayout = new javax.swing.GroupLayout(bgImagePanel);
-        bgImagePanel.setLayout(bgImagePanelLayout);
-        bgImagePanelLayout.setHorizontalGroup(
-            bgImagePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(bgImageLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 299, Short.MAX_VALUE)
-        );
-        bgImagePanelLayout.setVerticalGroup(
-            bgImagePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(bgImageLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-
-        ctrlPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Miau Panel", 1, 0));
+        ctrlPanel.setBackground(new java.awt.Color(0, 0, 0));
+        ctrlPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        ctrlPanel.setToolTipText("");
         ctrlPanel.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
-        titleLabel.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
+        titleLabel.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
+        titleLabel.setForeground(new java.awt.Color(255, 51, 204));
         titleLabel.setText("The Jump of The Cat");
         titleLabel.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
+        addCatButton.setBackground(new java.awt.Color(255, 255, 255));
         addCatButton.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
+        addCatButton.setForeground(new java.awt.Color(255, 51, 153));
         addCatButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/cat-black-face.png"))); // NOI18N
         addCatButton.setText("Cat cat = new Cat( );");
+        addCatButton.setFocusCycleRoot(true);
         addCatButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 addCat(evt);
             }
         });
 
+        catTable.setAutoCreateRowSorter(true);
+        catTable.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        catTable.setFont(new java.awt.Font("Verdana", 0, 11)); // NOI18N
         catTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null},
@@ -104,48 +104,91 @@ public class MainView extends javax.swing.JFrame {
                 {null, null}
             },
             new String [] {
-                "ID", "Cor"
+                "Nome", "Cor"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.Integer.class, java.lang.String.class
+                java.lang.Integer.class, java.lang.Integer.class
             };
 
             public Class getColumnClass(int columnIndex) {
                 return types [columnIndex];
             }
         });
+        catTable.setToolTipText("");
+        catTable.setAlignmentX(0.0F);
+        catTable.setAlignmentY(0.0F);
+        catTable.setAutoResizeMode(javax.swing.JTable.AUTO_RESIZE_ALL_COLUMNS);
+        catTable.setCellSelectionEnabled(true);
+        catTable.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        catTable.setFocusable(false);
+        catTable.setGridColor(new java.awt.Color(255, 51, 153));
+        catTable.setSelectionBackground(new java.awt.Color(255, 255, 255));
+        catTable.getTableHeader().setResizingAllowed(false);
         jScrollPane2.setViewportView(catTable);
-        if (catTable.getColumnModel().getColumnCount() > 0) {
-            catTable.getColumnModel().getColumn(0).setResizable(false);
-            catTable.getColumnModel().getColumn(1).setResizable(false);
-        }
+        catTable.getColumnModel().getSelectionModel().setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
+
+        jsair.setBackground(new java.awt.Color(255, 255, 255));
+        jsair.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
+        jsair.setText("Sair");
+        jsair.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jsairActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout ctrlPanelLayout = new javax.swing.GroupLayout(ctrlPanel);
         ctrlPanel.setLayout(ctrlPanelLayout);
         ctrlPanelLayout.setHorizontalGroup(
             ctrlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(ctrlPanelLayout.createSequentialGroup()
-                .addGap(18, 18, 18)
-                .addComponent(titleLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
-            .addGroup(ctrlPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(ctrlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(addCatButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 296, Short.MAX_VALUE)
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(34, 34, 34)
+                .addComponent(titleLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ctrlPanelLayout.createSequentialGroup()
+                .addGroup(ctrlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(ctrlPanelLayout.createSequentialGroup()
+                        .addGap(19, 19, 19)
+                        .addGroup(ctrlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(addCatButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addGroup(ctrlPanelLayout.createSequentialGroup()
+                        .addGap(113, 113, 113)
+                        .addComponent(jsair)))
+                .addGap(34, 34, 34))
         );
         ctrlPanelLayout.setVerticalGroup(
             ctrlPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(ctrlPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(titleLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(29, 29, 29)
+                .addComponent(titleLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 22, Short.MAX_VALUE)
+                .addGap(43, 43, 43)
                 .addComponent(addCatButton)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(49, 49, 49)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(331, 331, 331))
+                .addGap(157, 157, 157)
+                .addComponent(jsair)
+                .addContainerGap())
+        );
+
+        bgImagePanel.setBackground(new java.awt.Color(0, 0, 0));
+
+        bgImageLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/outrspc5.gif"))); // NOI18N
+
+        javax.swing.GroupLayout bgImagePanelLayout = new javax.swing.GroupLayout(bgImagePanel);
+        bgImagePanel.setLayout(bgImagePanelLayout);
+        bgImagePanelLayout.setHorizontalGroup(
+            bgImagePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(bgImagePanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(bgImageLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 365, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        bgImagePanelLayout.setVerticalGroup(
+            bgImagePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(bgImagePanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(bgImageLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 458, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -153,39 +196,50 @@ public class MainView extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(bgImagePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(bgImagePanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(ctrlPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(2, 2, 2)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(bgImagePanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(ctrlPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 444, Short.MAX_VALUE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(bgImagePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ctrlPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+    
+    // Botão para adicionar cats na aplicação
     private void addCat(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addCat
         if (catCounter < MAX_CAT_NUMBER) {
+            this.changeColorsJTable();
             this.bgImageLabel.add(addCatJlabel());
             catCounter++;
         } else {
             JOptionPane.showMessageDialog(null, "Ja tem gatinho de mais!", "MINHAU!!", JOptionPane.ERROR_MESSAGE);
         }
-
     }//GEN-LAST:event_addCat
+    
+    // Botão para sair da aplicação
+    private void jsairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jsairActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_jsairActionPerformed
+
+    public JTable changeColorsJTable() {
+        catTable.getTableHeader().setBackground(java.awt.Color.pink);
+        return catTable;
+    }
 
     public JLabel addCatJlabel() {
+
         String imgPath = getRandomImage();
         ImageIcon icon = new ImageIcon(imgPath);
+        
         Cat cat = new Cat(icon);
-        catTable.setValueAt(cat.getId(), catCounter, 0);
+        catTable.setValueAt(cat.getName(), catCounter, 0);
         catTable.setValueAt(getCatColor(imgPath), catCounter, 1);
         cat.setSize(80, 85);
         cat.setVisible(true);
@@ -207,7 +261,7 @@ public class MainView extends javax.swing.JFrame {
 
     public String getRandomImage() {
         Random random = new Random();
-        String prefix = "./src/images/gato0";
+        String prefix = "./src/images/cat0";
         String imageAddrs = prefix.concat(Integer.toString(random.nextInt(3) + 1)).concat(".png");
         return imageAddrs;
     }
@@ -256,6 +310,7 @@ public class MainView extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable jTable1;
+    private javax.swing.JButton jsair;
     private javax.swing.JLabel titleLabel;
     // End of variables declaration//GEN-END:variables
 }

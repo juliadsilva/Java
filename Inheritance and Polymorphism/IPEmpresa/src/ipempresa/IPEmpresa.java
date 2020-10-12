@@ -3,26 +3,22 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
-package controller;
-
-import view.MainView;
+package ipempresa;
 
 /**
  *
- * @author Julia
- * https://github.com/juliadsilva
+ * @author Administrador
  */
-
-public class Main {
+public class IPEmpresa {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        Engenheiro eng = new Engenheiro();
         
-        MainView frame = new MainView();
-        frame.setVisible(true);
+        eng.cpf = 123456789;
+        eng.nome = "Bruno";
     }
+    
 }
-   
