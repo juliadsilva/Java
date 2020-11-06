@@ -17,12 +17,12 @@ public class Personagem implements Movel {
 
     @Override
     public void movePraCima() {
-        posicaoY++; 
+        posicaoY--; 
     }
 
     @Override
     public void movePraBaixo() {
-        posicaoY--;
+        posicaoY++;
     }
 
     @Override
@@ -32,7 +32,7 @@ public class Personagem implements Movel {
 
     @Override
     public void movePraEsquerda() {
-        posicaoY--;
+        posicaoX--;
     }
     
 }

@@ -21,7 +21,20 @@ public class PacMan extends Personagem {
     public void ganhaPonto(){
        pontuacao++;
     }
-    
-    
-    
+
+    public void setPontuacao(int pontuacao) {
+        this.pontuacao = pontuacao;
+    }
+
+    public void setVidas(int vidas) {
+        this.vidas = vidas;
+    }
+
+    public int getPontuacao() {
+        return pontuacao;
+    }
+
+    public int getVidas() {
+        return vidas;
+    }      
 }
