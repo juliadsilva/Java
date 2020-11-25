@@ -5,8 +5,6 @@
  */
 package view;
 
-import controller.Checagem;
-import controller.Executar;
 import controller.Mixer;
 import java.util.ArrayList;
 import java.util.logging.Level;
