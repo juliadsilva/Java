@@ -19,7 +19,7 @@ public class MainFrame extends javax.swing.JFrame {
     Maquina maquina;
     Bebida bebida;
     ArrayList<Thread> threadArray = new ArrayList<Thread>();
-    boolean usarSemaforo = true;
+    public static boolean usarSemaforo = true;
     
     /**
      * Creates new form MainFrame
@@ -499,7 +499,7 @@ public class MainFrame extends javax.swing.JFrame {
         visorTextArea.setText(text);
         bebida = new Cafe(acucar);
         String ingredientes = acucar != 0 ? "Café, água e açúcar" : "Café e água";
-        Mixer m = new Mixer(maquina.getFilaPreparo(), ingredientes,usarSemaforo);
+        Mixer m = new Mixer(maquina.getFilaPreparo(), ingredientes);
         Thread cafeThread = new Thread(m,"Café");
         threadArray.add(cafeThread);
         mostraFila();
@@ -511,7 +511,7 @@ public class MainFrame extends javax.swing.JFrame {
         visorTextArea.setText(text);
         bebida = new Chocolate(acucar);
         String ingredientes = acucar != 0 ? "Chocolate, leite e açúcar" : "Chocolate e leite";
-        Mixer m = new Mixer(maquina.getFilaPreparo(), ingredientes,usarSemaforo);
+        Mixer m = new Mixer(maquina.getFilaPreparo(), ingredientes);
         Thread chocolateThread = new Thread(m,"Chocolate");
         threadArray.add(chocolateThread);
         mostraFila();
@@ -523,7 +523,7 @@ public class MainFrame extends javax.swing.JFrame {
         visorTextArea.setText(text);
         bebida = new Pingado(acucar);
         String ingredientes = acucar != 0 ? "Café, leite e açúcar" : "Café e leite";
-        Mixer m = new Mixer(maquina.getFilaPreparo(), ingredientes,usarSemaforo);
+        Mixer m = new Mixer(maquina.getFilaPreparo(), ingredientes);
         Thread pingadoThread = new Thread(m,"Café com Leite");
         threadArray.add(pingadoThread);
         mostraFila();
@@ -533,7 +533,7 @@ public class MainFrame extends javax.swing.JFrame {
         visorTextArea.setText("Máquina de Café\nBebida Selecionada: Água Quente");
         bebida = new AguaQuente();
         String ingredientes = "Água";
-        Mixer m = new Mixer(maquina.getFilaPreparo(), ingredientes,usarSemaforo);
+        Mixer m = new Mixer(maquina.getFilaPreparo(), ingredientes);
         Thread aguaQuenteThread = new Thread(m,"Água quente");
         threadArray.add(aguaQuenteThread);
         mostraFila();
@@ -571,6 +571,10 @@ public class MainFrame extends javax.swing.JFrame {
         } catch (InterruptedException ex) {
             Logger.getLogger(MainFrame.class.getName()).log(Level.SEVERE, null, ex);
         }
+    }
+    
+    public static boolean getSemaphoreState(){
+        return usarSemaforo;
     }
     
     private void mostraFila(){

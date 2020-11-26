@@ -15,7 +15,6 @@ import view.MainFrame;
 public class FilaPreparo {
     Semaphore semaforo = new Semaphore(1);
     
-        // Metodo que Imprime Sem Semáforo
     public void prepraBebidaSemSemaforo(String ingredientes) {
         MainFrame.addSaidaConsole("\nMisturando: " + ingredientes);
         MainFrame.addSaidaConsole("\n" + Thread.currentThread().getName() + " está pronto!");

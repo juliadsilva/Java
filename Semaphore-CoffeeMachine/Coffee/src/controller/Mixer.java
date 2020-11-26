@@ -14,18 +14,16 @@ import view.MainFrame;
 public class Mixer implements Runnable{
     FilaPreparo fila;
     String ingredientes;
-    boolean usarSemaforo;
     
-    public Mixer(FilaPreparo fila, String ingredientes, boolean usarSemaforo){
+    public Mixer(FilaPreparo fila, String ingredientes ){
         this.fila = fila;
         this.ingredientes = ingredientes;
-        this.usarSemaforo = usarSemaforo;
     }
     
     @Override
     public void run() {
         MainFrame.addSaidaConsole("\nPronto para começar o " + Thread.currentThread().getName());
-        if(usarSemaforo) fila.prepraBebida(ingredientes);
+        if(MainFrame.getSemaphoreState()) fila.prepraBebida(ingredientes);
         else fila.prepraBebidaSemSemaforo(ingredientes);
     }
 }

@@ -17,6 +17,5 @@ public class AguaQuente extends Bebida {
     
     public AguaQuente() {
         super(qtdAcucar, qtdAgua, qtdIngrediente, "Água Quente");
-    }
-    
+    } 
 }
