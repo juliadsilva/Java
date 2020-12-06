@@ -12,7 +12,7 @@ import javax.swing.JOptionPane;
  * @author Administrador
  */
 public class DivisaoSegura {
-
+        
     public static void main(String[] args) {
         while (true) {
             try {

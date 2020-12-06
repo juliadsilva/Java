@@ -25,7 +25,7 @@ public class Banco {
 
         try {
             c.sacar(3501);
-        } catch (Sacar_Exception e) {
+        } catch (SaldoInsuficienteException e) {
             JOptionPane.showMessageDialog(null, e.getMessage());
         }
     }

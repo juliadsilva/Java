@@ -31,10 +31,10 @@ public class Conta {
 
     public void sacar(int valor) {
         if (valor > saldo) {
-           throw new Sacar_Exception("Saldo Insuficiente");
+           throw new SaldoInsuficienteException("Saldo Insuficiente");
         }
         if (valor > limite) {
-            throw new Sacar_Exception("Valor maior que o limite");
+            throw new SaldoInsuficienteException("Valor maior que o limite");
         }
 
         saldo = saldo - valor;
