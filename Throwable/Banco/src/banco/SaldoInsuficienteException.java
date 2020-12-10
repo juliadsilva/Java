@@ -5,8 +5,6 @@
  */
 package banco;
 
-import javax.swing.JOptionPane;
-
 /**
  *
  * @author Administrador

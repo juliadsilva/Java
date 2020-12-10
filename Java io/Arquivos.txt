@@ -1,0 +1,129 @@
+---------------------------[Salvando ArrayList<> em arquivo .txt]--------------------------------
+
+//classe para escrever e ler no arquivo
+public class Arquivo {
+    //Construtor para criação do arquivo .txt com nome "usuario"
+    public Arquivo() {
+        try {
+            OutputStream os = new FileOutputStream("usuarios.txt", true);
+        } catch (Exception e) {
+        }
+
+    }
+
+    //metodo para salvar no arquivo
+   public void salvarArquivo(ArrayList<Usuario> usuarios) {
+        try {
+            //salvando em um arquivo
+            OutputStream os = new FileOutputStream("usuarios.txt", false);
+            ObjectOutputStream osw = new ObjectOutputStream(os);
+            osw.writeObject(usuarios);
+
+            //fechando o arquivo
+            osw.close();
+            os.close();
+
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(Arquivo.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IOException ex) {
+            Logger.getLogger(Arquivo.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+    }
+    //método para ler o o arquivo .txt "usuario"
+    public ArrayList<Usuario> ler() {
+
+        FileInputStream fin;
+        ObjectInputStream in;
+        ArrayList<Usuario> usuario = new ArrayList<>();
+
+        try {
+            fin = new FileInputStream("usuarios.txt");
+            in = new ObjectInputStream(fin);
+
+            usuario = (ArrayList<Usuario>) in.readObject();
+
+            in.close();
+            fin.close();
+        } catch (Exception ex) {
+            System.out.println(ex);
+        }
+        
+        return usuario;
+    }
+
+--------------------------------[Lista]----------------------------------------
+DefaultListModel dlm = new DefaultListModel();
+String valorLista;
+
+private void jList1ValueChanged(javax.swing.event.ListSelectionEvent evt) {                                    
+        valorLista = jList1.getSelectedValue();
+}
+
+--------------------------------[Salvando textos em arquivo .txt]--------------------------------
+public class Arquivo {
+
+    public String linha = null;
+    
+    public Arquivo() {
+        try {
+            OutputStream os = new FileOutputStream("Exemplo.txt",true);
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(Arquivo.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+      public void salvar(){
+        try {
+            //Salvando
+            OutputStream os = new FileOutputStream("Exemplo.txt",true);
+            OutputStreamWriter osw = new OutputStreamWriter(os);
+            BufferedWriter bw = new BufferedWriter(osw);
+            linha = "Ola";
+            bw.write(linha);
+            bw.newLine();
+            
+            //Fechando
+            bw.close();
+            os.close();
+            
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(Arquivo.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IOException ex) {
+            Logger.getLogger(Arquivo.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        }
+        
+    public void ler(){
+        //Lendo Arquivo
+        FileInputStream fis;
+        InputStreamReader isr;
+        BufferedReader br;
+        
+        try {
+            fis = new FileInputStream("Exemplo.txt");
+            isr = new InputStreamReader(fis);
+            br = new BufferedReader(isr);
+            
+            linha = br.readLine();
+            while(linha != null){
+                if(linha.equals("Ola Mundo!")){
+                    System.out.println(linha);
+                }
+                linha = br.readLine();
+            }
+            
+            //Fechando Arquivo
+            br.close();
+            fis.close();
+            
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(Arquivo.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IOException ex) {
+            Logger.getLogger(Arquivo.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+    }
+    
+    
+}
+

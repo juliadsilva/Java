@@ -3,21 +3,20 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package simuvoto;
+package controller;
+
+import view.Cadastroview;
 
 /**
  *
  * @author julin
  */
-public class SimuVoto {
+public class LojaVirtual {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
-        
-        
-    }
-    
+        new Cadastroview().setVisible(true);   
+    } 
 }

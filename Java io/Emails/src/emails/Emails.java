@@ -75,7 +75,8 @@ public class Emails {
                         "GEA: "+gea+" GES:"+ges+" GEC:"+gec+
                                 " GET:"+get+" GEB:"+geb+" GEP:"+gep);
                 
-                gec = 0;geb =0;get = 0;gea =0;ges = 0;gep =0;
+                gec = 0;geb = 0;get = 0;gea =0;ges = 0;gep = 0;
+                
                 is.close();
                 isr.close();
                 br.close();
