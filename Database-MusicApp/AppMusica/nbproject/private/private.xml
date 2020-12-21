@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Users/julin/OneDrive/Área%20de%20Trabalho/Projeto/AppMusica/src/br/inatel/meaw/model/UserComum.java</file>
+            <file>file:/C:/Users/julin/OneDrive/Área%20de%20Trabalho/Projeto/AppMusica/src/br/inatel/meaw/view/Cadastroview.java</file>
+            <file>file:/C:/Users/julin/OneDrive/Área%20de%20Trabalho/Projeto/AppMusica/src/br/inatel/meaw/view/Gerenciadorview.java</file>
+            <file>file:/C:/Users/julin/OneDrive/Área%20de%20Trabalho/Projeto/AppMusica/src/br/inatel/meaw/controller/Main.java</file>
+            <file>file:/C:/Users/julin/OneDrive/Área%20de%20Trabalho/Projeto/AppMusica/src/br/inatel/meaw/model/DAO/UsuarioDAO.java</file>
+            <file>file:/C:/Users/julin/OneDrive/Área%20de%20Trabalho/Projeto/AppMusica/src/br/inatel/meaw/model/Musica.java</file>
+            <file>file:/C:/Users/julin/OneDrive/Área%20de%20Trabalho/Projeto/AppMusica/src/br/inatel/meaw/model/Gerenciador.java</file>
+            <file>file:/C:/Users/julin/OneDrive/Área%20de%20Trabalho/Projeto/AppMusica/src/br/inatel/meaw/model/Usuario.java</file>
+            <file>file:/C:/Users/julin/OneDrive/Área%20de%20Trabalho/Projeto/AppMusica/src/br/inatel/meaw/model/UserPremium.java</file>
+            <file>file:/C:/Users/julin/OneDrive/Área%20de%20Trabalho/Projeto/AppMusica/src/br/inatel/meaw/model/DAO/GerenciadorDAO.java</file>
+            <file>file:/C:/Users/julin/OneDrive/Área%20de%20Trabalho/Projeto/AppMusica/src/br/inatel/meaw/view/CriarPlaylistView.java</file>
+            <file>file:/C:/Users/julin/OneDrive/Área%20de%20Trabalho/Projeto/AppMusica/src/br/inatel/meaw/model/Playlist.java</file>
+            <file>file:/C:/Users/julin/OneDrive/Área%20de%20Trabalho/Projeto/AppMusica/src/br/inatel/meaw/exception/EmailInvalidoException.java</file>
+            <file>file:/C:/Users/julin/OneDrive/Área%20de%20Trabalho/Projeto/AppMusica/src/br/inatel/meaw/model/DAO/UserPremiumDAO.java</file>
+            <file>file:/C:/Users/julin/OneDrive/Área%20de%20Trabalho/Projeto/AppMusica/src/br/inatel/meaw/view/Playlistview.java</file>
+            <file>file:/C:/Users/julin/OneDrive/Área%20de%20Trabalho/Projeto/AppMusica/src/br/inatel/meaw/exception/CampoVazioException.java</file>
+            <file>file:/C:/Users/julin/OneDrive/Área%20de%20Trabalho/Projeto/AppMusica/src/br/inatel/meaw/view/Musicaview.java</file>
+            <file>file:/C:/Users/julin/OneDrive/Área%20de%20Trabalho/Projeto/AppMusica/src/br/inatel/meaw/controller/MySQLConnection.java</file>
+            <file>file:/C:/Users/julin/OneDrive/Área%20de%20Trabalho/Projeto/AppMusica/src/br/inatel/meaw/model/DAO/UserComumDAO.java</file>
+            <file>file:/C:/Users/julin/OneDrive/Área%20de%20Trabalho/Projeto/AppMusica/src/br/inatel/meaw/model/Artista.java</file>
+            <file>file:/C:/Users/julin/OneDrive/Área%20de%20Trabalho/Projeto/AppMusica/src/br/inatel/meaw/utils/Constants.java</file>
+        </group>
+    </open-files>
+</project-private>

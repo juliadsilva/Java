@@ -57,12 +57,12 @@ public class Gerenciadorview extends javax.swing.JFrame {
         jTextField1 = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
         jEditorPane1 = new javax.swing.JEditorPane();
-        buttonGroup1 = new javax.swing.ButtonGroup();
+        buttonGroupGenero = new javax.swing.ButtonGroup();
         jScrollPane3 = new javax.swing.JScrollPane();
         jTextPane1 = new javax.swing.JTextPane();
         jComboBox1 = new javax.swing.JComboBox<>();
         panelInicial = new javax.swing.JPanel();
-        jLabel4 = new javax.swing.JLabel();
+        title2 = new javax.swing.JLabel();
         painelCadastro = new javax.swing.JPanel();
         jLabel_Artista = new javax.swing.JLabel();
         emusicaID = new javax.swing.JTextField();
@@ -74,7 +74,7 @@ public class Gerenciadorview extends javax.swing.JFrame {
         radioPop = new javax.swing.JRadioButton();
         radioMpb = new javax.swing.JRadioButton();
         radioGospel = new javax.swing.JRadioButton();
-        jLabel_Tempo1 = new javax.swing.JLabel();
+        jLabel_Tempo = new javax.swing.JLabel();
         radioEletronica = new javax.swing.JRadioButton();
         radioPagode = new javax.swing.JRadioButton();
         radioIndie = new javax.swing.JRadioButton();
@@ -84,12 +84,12 @@ public class Gerenciadorview extends javax.swing.JFrame {
         comboboxArtista = new javax.swing.JComboBox<>();
         btnCadastrarMusica = new javax.swing.JButton();
         btnAtualizarMusica = new javax.swing.JButton();
-        jLabel_NOME1 = new javax.swing.JLabel();
+        jLabel_NOME = new javax.swing.JLabel();
         emusicaNome = new javax.swing.JTextField();
         panelLogin = new javax.swing.JPanel();
         excluiridMusica = new javax.swing.JTextField();
         btnExcluirMusica = new javax.swing.JButton();
-        jLabel_LOGINEMAIL1 = new javax.swing.JLabel();
+        jLabel_id = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
         tableUsuario = new javax.swing.JTable();
@@ -99,13 +99,13 @@ public class Gerenciadorview extends javax.swing.JFrame {
         tableMusica = new javax.swing.JTable();
         btnExcluirUsuario = new javax.swing.JButton();
         btnSair = new javax.swing.JButton();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
+        title = new javax.swing.JLabel();
+        icon2 = new javax.swing.JLabel();
+        icon1 = new javax.swing.JLabel();
         panelLogin1 = new javax.swing.JPanel();
         jLabel_Artista1 = new javax.swing.JLabel();
         comboboxselectArtista = new javax.swing.JComboBox<>();
-        jLabel_LOGINEMAIL = new javax.swing.JLabel();
+        jLabel_MUSICAS = new javax.swing.JLabel();
         quantidadeMusica = new javax.swing.JTextField();
         btnQtdArtista = new javax.swing.JButton();
         btnAdiconarArtista = new javax.swing.JButton();
@@ -124,14 +124,14 @@ public class Gerenciadorview extends javax.swing.JFrame {
         panelInicial.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         panelInicial.setForeground(new java.awt.Color(255, 255, 255));
 
-        jLabel4.setBackground(new java.awt.Color(247, 37, 133));
-        jLabel4.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(247, 37, 133));
-        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel4.setText("Gerenciador");
-        jLabel4.setToolTipText("");
-        jLabel4.setFocusable(false);
-        jLabel4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        title2.setBackground(new java.awt.Color(247, 37, 133));
+        title2.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        title2.setForeground(new java.awt.Color(247, 37, 133));
+        title2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        title2.setText("Gerenciador");
+        title2.setToolTipText("");
+        title2.setFocusable(false);
+        title2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
         painelCadastro.setBackground(new java.awt.Color(169, 210, 254));
         painelCadastro.setBorder(javax.swing.BorderFactory.createTitledBorder(new javax.swing.border.LineBorder(new java.awt.Color(247, 37, 133), 2, true), "Adicionar Musica", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 1, 16), new java.awt.Color(247, 37, 133))); // NOI18N
@@ -168,7 +168,7 @@ public class Gerenciadorview extends javax.swing.JFrame {
         emusicaAno.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(247, 37, 133), 1, true));
 
         radioPop.setBackground(new java.awt.Color(169, 210, 254));
-        buttonGroup1.add(radioPop);
+        buttonGroupGenero.add(radioPop);
         radioPop.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         radioPop.setForeground(new java.awt.Color(247, 37, 133));
         radioPop.setText("Pop");
@@ -176,7 +176,7 @@ public class Gerenciadorview extends javax.swing.JFrame {
         radioPop.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
 
         radioMpb.setBackground(new java.awt.Color(169, 210, 254));
-        buttonGroup1.add(radioMpb);
+        buttonGroupGenero.add(radioMpb);
         radioMpb.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         radioMpb.setForeground(new java.awt.Color(247, 37, 133));
         radioMpb.setText("MPB");
@@ -184,19 +184,19 @@ public class Gerenciadorview extends javax.swing.JFrame {
         radioMpb.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
 
         radioGospel.setBackground(new java.awt.Color(169, 210, 254));
-        buttonGroup1.add(radioGospel);
+        buttonGroupGenero.add(radioGospel);
         radioGospel.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         radioGospel.setForeground(new java.awt.Color(247, 37, 133));
         radioGospel.setText("Gospel");
         radioGospel.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         radioGospel.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
 
-        jLabel_Tempo1.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        jLabel_Tempo1.setForeground(new java.awt.Color(247, 37, 133));
-        jLabel_Tempo1.setText("Tempo Duração:");
+        jLabel_Tempo.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jLabel_Tempo.setForeground(new java.awt.Color(247, 37, 133));
+        jLabel_Tempo.setText("Tempo Duração:");
 
         radioEletronica.setBackground(new java.awt.Color(169, 210, 254));
-        buttonGroup1.add(radioEletronica);
+        buttonGroupGenero.add(radioEletronica);
         radioEletronica.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         radioEletronica.setForeground(new java.awt.Color(247, 37, 133));
         radioEletronica.setText("Eletronica");
@@ -204,7 +204,7 @@ public class Gerenciadorview extends javax.swing.JFrame {
         radioEletronica.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
 
         radioPagode.setBackground(new java.awt.Color(169, 210, 254));
-        buttonGroup1.add(radioPagode);
+        buttonGroupGenero.add(radioPagode);
         radioPagode.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         radioPagode.setForeground(new java.awt.Color(247, 37, 133));
         radioPagode.setText("Pagode");
@@ -212,7 +212,7 @@ public class Gerenciadorview extends javax.swing.JFrame {
         radioPagode.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
 
         radioIndie.setBackground(new java.awt.Color(169, 210, 254));
-        buttonGroup1.add(radioIndie);
+        buttonGroupGenero.add(radioIndie);
         radioIndie.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         radioIndie.setForeground(new java.awt.Color(247, 37, 133));
         radioIndie.setText("Indie");
@@ -220,7 +220,7 @@ public class Gerenciadorview extends javax.swing.JFrame {
         radioIndie.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
 
         radioRock.setBackground(new java.awt.Color(169, 210, 254));
-        buttonGroup1.add(radioRock);
+        buttonGroupGenero.add(radioRock);
         radioRock.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         radioRock.setForeground(new java.awt.Color(247, 37, 133));
         radioRock.setText("Rock");
@@ -228,7 +228,7 @@ public class Gerenciadorview extends javax.swing.JFrame {
         radioRock.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
 
         radioSertanejo.setBackground(new java.awt.Color(169, 210, 254));
-        buttonGroup1.add(radioSertanejo);
+        buttonGroupGenero.add(radioSertanejo);
         radioSertanejo.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         radioSertanejo.setForeground(new java.awt.Color(247, 37, 133));
         radioSertanejo.setText("Sertanejo");
@@ -236,7 +236,7 @@ public class Gerenciadorview extends javax.swing.JFrame {
         radioSertanejo.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
 
         radioHiphop.setBackground(new java.awt.Color(169, 210, 254));
-        buttonGroup1.add(radioHiphop);
+        buttonGroupGenero.add(radioHiphop);
         radioHiphop.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         radioHiphop.setForeground(new java.awt.Color(247, 37, 133));
         radioHiphop.setText("Hip Hop");
@@ -275,9 +275,9 @@ public class Gerenciadorview extends javax.swing.JFrame {
             }
         });
 
-        jLabel_NOME1.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        jLabel_NOME1.setForeground(new java.awt.Color(247, 37, 133));
-        jLabel_NOME1.setText("Nome:");
+        jLabel_NOME.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jLabel_NOME.setForeground(new java.awt.Color(247, 37, 133));
+        jLabel_NOME.setText("Nome:");
 
         emusicaNome.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
         emusicaNome.setForeground(new java.awt.Color(114, 9, 183));
@@ -291,7 +291,7 @@ public class Gerenciadorview extends javax.swing.JFrame {
                 .addGap(5, 5, 5)
                 .addGroup(painelCadastroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(painelCadastroLayout.createSequentialGroup()
-                        .addComponent(jLabel_NOME1)
+                        .addComponent(jLabel_NOME)
                         .addGap(13, 13, 13)
                         .addGroup(painelCadastroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painelCadastroLayout.createSequentialGroup()
@@ -314,7 +314,7 @@ public class Gerenciadorview extends javax.swing.JFrame {
                                         .addComponent(comboboxArtista, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                                 .addGap(0, 17, Short.MAX_VALUE))))
                     .addGroup(painelCadastroLayout.createSequentialGroup()
-                        .addComponent(jLabel_Tempo1)
+                        .addComponent(jLabel_Tempo)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(emusicaTempo, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap())
@@ -362,11 +362,11 @@ public class Gerenciadorview extends javax.swing.JFrame {
                         .addGroup(painelCadastroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel_Artista)
                             .addComponent(comboboxArtista, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel_NOME1)))
+                            .addComponent(jLabel_NOME)))
                     .addComponent(emusicaNome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(painelCadastroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel_Tempo1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel_Tempo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(emusicaTempo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel_Ano)
                     .addComponent(emusicaAno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -415,9 +415,9 @@ public class Gerenciadorview extends javax.swing.JFrame {
             }
         });
 
-        jLabel_LOGINEMAIL1.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        jLabel_LOGINEMAIL1.setForeground(new java.awt.Color(247, 37, 133));
-        jLabel_LOGINEMAIL1.setText("ID:");
+        jLabel_id.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jLabel_id.setForeground(new java.awt.Color(247, 37, 133));
+        jLabel_id.setText("ID:");
 
         javax.swing.GroupLayout panelLoginLayout = new javax.swing.GroupLayout(panelLogin);
         panelLogin.setLayout(panelLoginLayout);
@@ -432,7 +432,7 @@ public class Gerenciadorview extends javax.swing.JFrame {
             .addGroup(panelLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(panelLoginLayout.createSequentialGroup()
                     .addGap(33, 33, 33)
-                    .addComponent(jLabel_LOGINEMAIL1)
+                    .addComponent(jLabel_id)
                     .addContainerGap(135, Short.MAX_VALUE)))
         );
         panelLoginLayout.setVerticalGroup(
@@ -446,7 +446,7 @@ public class Gerenciadorview extends javax.swing.JFrame {
             .addGroup(panelLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(panelLoginLayout.createSequentialGroup()
                     .addGap(35, 35, 35)
-                    .addComponent(jLabel_LOGINEMAIL1)
+                    .addComponent(jLabel_id)
                     .addContainerGap(92, Short.MAX_VALUE)))
         );
 
@@ -604,32 +604,32 @@ public class Gerenciadorview extends javax.swing.JFrame {
             }
         });
 
-        jLabel5.setBackground(new java.awt.Color(247, 37, 133));
-        jLabel5.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(247, 37, 133));
-        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel5.setText("MEAW");
-        jLabel5.setToolTipText("");
-        jLabel5.setFocusable(false);
-        jLabel5.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        title.setBackground(new java.awt.Color(247, 37, 133));
+        title.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        title.setForeground(new java.awt.Color(247, 37, 133));
+        title.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        title.setText("MEAW");
+        title.setToolTipText("");
+        title.setFocusable(false);
+        title.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
-        jLabel6.setBackground(new java.awt.Color(247, 37, 133));
-        jLabel6.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(247, 37, 133));
-        jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/inatel/meaw/images/cat-black-face.png"))); // NOI18N
-        jLabel6.setToolTipText("");
-        jLabel6.setFocusable(false);
-        jLabel6.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        icon2.setBackground(new java.awt.Color(247, 37, 133));
+        icon2.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        icon2.setForeground(new java.awt.Color(247, 37, 133));
+        icon2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        icon2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/inatel/meaw/images/cat-black-face.png"))); // NOI18N
+        icon2.setToolTipText("");
+        icon2.setFocusable(false);
+        icon2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
-        jLabel7.setBackground(new java.awt.Color(247, 37, 133));
-        jLabel7.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(247, 37, 133));
-        jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/inatel/meaw/images/cat-black-face.png"))); // NOI18N
-        jLabel7.setToolTipText("");
-        jLabel7.setFocusable(false);
-        jLabel7.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        icon1.setBackground(new java.awt.Color(247, 37, 133));
+        icon1.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        icon1.setForeground(new java.awt.Color(247, 37, 133));
+        icon1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        icon1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/inatel/meaw/images/cat-black-face.png"))); // NOI18N
+        icon1.setToolTipText("");
+        icon1.setFocusable(false);
+        icon1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
         panelLogin1.setBackground(new java.awt.Color(169, 210, 254));
         panelLogin1.setBorder(javax.swing.BorderFactory.createTitledBorder(new javax.swing.border.LineBorder(new java.awt.Color(247, 37, 133), 2, true), "Artista", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 1, 16), new java.awt.Color(247, 37, 133))); // NOI18N
@@ -645,9 +645,9 @@ public class Gerenciadorview extends javax.swing.JFrame {
         comboboxselectArtista.setForeground(new java.awt.Color(114, 9, 183));
         comboboxselectArtista.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(247, 37, 133), 1, true));
 
-        jLabel_LOGINEMAIL.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        jLabel_LOGINEMAIL.setForeground(new java.awt.Color(247, 37, 133));
-        jLabel_LOGINEMAIL.setText("Musica:");
+        jLabel_MUSICAS.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jLabel_MUSICAS.setForeground(new java.awt.Color(247, 37, 133));
+        jLabel_MUSICAS.setText("Musica:");
 
         quantidadeMusica.setEditable(false);
         quantidadeMusica.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
@@ -687,7 +687,7 @@ public class Gerenciadorview extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(panelLogin1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel_Artista1)
-                    .addComponent(jLabel_LOGINEMAIL))
+                    .addComponent(jLabel_MUSICAS))
                 .addGap(18, 18, 18)
                 .addGroup(panelLogin1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(panelLogin1Layout.createSequentialGroup()
@@ -712,7 +712,7 @@ public class Gerenciadorview extends javax.swing.JFrame {
                     .addComponent(comboboxselectArtista, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(14, 14, 14)
                 .addGroup(panelLogin1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel_LOGINEMAIL)
+                    .addComponent(jLabel_MUSICAS)
                     .addComponent(quantidadeMusica, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnQtdArtista))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 10, Short.MAX_VALUE)
@@ -729,9 +729,9 @@ public class Gerenciadorview extends javax.swing.JFrame {
                         .addGap(15, 15, 15)
                         .addGroup(panelInicialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, panelInicialLayout.createSequentialGroup()
-                                .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(icon1, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(93, 93, 93)
-                                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 273, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(title, javax.swing.GroupLayout.PREFERRED_SIZE, 273, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, panelInicialLayout.createSequentialGroup()
                                 .addComponent(panelLogin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(8, 8, 8)
@@ -742,9 +742,9 @@ public class Gerenciadorview extends javax.swing.JFrame {
                 .addGroup(panelInicialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(panelInicialLayout.createSequentialGroup()
                         .addGap(0, 167, Short.MAX_VALUE)
-                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(title2, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(101, 101, 101)
-                        .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(icon2, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(30, 30, 30)
                         .addComponent(btnSair))
                     .addGroup(panelInicialLayout.createSequentialGroup()
@@ -765,12 +765,12 @@ public class Gerenciadorview extends javax.swing.JFrame {
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelInicialLayout.createSequentialGroup()
                                 .addGap(0, 0, Short.MAX_VALUE)
                                 .addGroup(panelInicialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel7, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(icon1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelInicialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                        .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                        .addComponent(title, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(title2, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE))))
                             .addGroup(panelInicialLayout.createSequentialGroup()
-                                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(icon2, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(0, 0, Short.MAX_VALUE)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
                 .addGroup(panelInicialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -996,7 +996,7 @@ public class Gerenciadorview extends javax.swing.JFrame {
         idDelete.setText("");
         excluiridMusica.setText("");
         quantidadeMusica.setText("");
-        buttonGroup1.clearSelection();
+        buttonGroupGenero.clearSelection();
     }
   
 
@@ -1009,7 +1009,7 @@ public class Gerenciadorview extends javax.swing.JFrame {
     private javax.swing.JButton btnQtdArtista;
     private javax.swing.JButton btnSair;
     private javax.swing.JButton btnSelecionarMusica;
-    private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.ButtonGroup buttonGroupGenero;
     private javax.swing.JComboBox<String> comboboxArtista;
     private javax.swing.JComboBox<String> comboboxselectArtista;
     private javax.swing.JLabel eidMusica;
@@ -1018,21 +1018,19 @@ public class Gerenciadorview extends javax.swing.JFrame {
     private javax.swing.JTextField emusicaNome;
     private javax.swing.JTextField emusicaTempo;
     private javax.swing.JTextField excluiridMusica;
+    private javax.swing.JLabel icon1;
+    private javax.swing.JLabel icon2;
     private javax.swing.JTextField idDelete;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JEditorPane jEditorPane1;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel_Ano;
     private javax.swing.JLabel jLabel_Artista;
     private javax.swing.JLabel jLabel_Artista1;
     private javax.swing.JLabel jLabel_Genero;
-    private javax.swing.JLabel jLabel_LOGINEMAIL;
-    private javax.swing.JLabel jLabel_LOGINEMAIL1;
-    private javax.swing.JLabel jLabel_NOME1;
-    private javax.swing.JLabel jLabel_Tempo1;
+    private javax.swing.JLabel jLabel_MUSICAS;
+    private javax.swing.JLabel jLabel_NOME;
+    private javax.swing.JLabel jLabel_Tempo;
+    private javax.swing.JLabel jLabel_id;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
@@ -1056,5 +1054,7 @@ public class Gerenciadorview extends javax.swing.JFrame {
     private javax.swing.JRadioButton radioSertanejo;
     private javax.swing.JTable tableMusica;
     private javax.swing.JTable tableUsuario;
+    private javax.swing.JLabel title;
+    private javax.swing.JLabel title2;
     // End of variables declaration//GEN-END:variables
 }

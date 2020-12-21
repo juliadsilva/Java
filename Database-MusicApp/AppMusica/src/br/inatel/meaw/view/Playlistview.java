@@ -70,10 +70,10 @@ public class Playlistview extends javax.swing.JFrame {
         btnProximo = new javax.swing.JButton();
         btnAnterior = new javax.swing.JButton();
         btnSair = new javax.swing.JButton();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
+        title2 = new javax.swing.JLabel();
+        title1 = new javax.swing.JLabel();
+        icon2 = new javax.swing.JLabel();
+        icon1 = new javax.swing.JLabel();
         btnAbrirMusicas = new javax.swing.JButton();
 
         jTextField1.setText("jTextField1");
@@ -329,41 +329,41 @@ public class Playlistview extends javax.swing.JFrame {
             }
         });
 
-        jLabel4.setBackground(new java.awt.Color(247, 37, 133));
-        jLabel4.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(247, 37, 133));
-        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel4.setText("Playlist");
-        jLabel4.setToolTipText("");
-        jLabel4.setFocusable(false);
-        jLabel4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        title2.setBackground(new java.awt.Color(247, 37, 133));
+        title2.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        title2.setForeground(new java.awt.Color(247, 37, 133));
+        title2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        title2.setText("Playlist");
+        title2.setToolTipText("");
+        title2.setFocusable(false);
+        title2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
-        jLabel5.setBackground(new java.awt.Color(169, 210, 254));
-        jLabel5.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(247, 37, 133));
-        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel5.setText("MEAW");
-        jLabel5.setToolTipText("");
-        jLabel5.setFocusable(false);
-        jLabel5.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        title1.setBackground(new java.awt.Color(169, 210, 254));
+        title1.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        title1.setForeground(new java.awt.Color(247, 37, 133));
+        title1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        title1.setText("MEAW");
+        title1.setToolTipText("");
+        title1.setFocusable(false);
+        title1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
-        jLabel6.setBackground(new java.awt.Color(247, 37, 133));
-        jLabel6.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(247, 37, 133));
-        jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/inatel/meaw/images/cat-black-face.png"))); // NOI18N
-        jLabel6.setToolTipText("");
-        jLabel6.setFocusable(false);
-        jLabel6.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        icon2.setBackground(new java.awt.Color(247, 37, 133));
+        icon2.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        icon2.setForeground(new java.awt.Color(247, 37, 133));
+        icon2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        icon2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/inatel/meaw/images/cat-black-face.png"))); // NOI18N
+        icon2.setToolTipText("");
+        icon2.setFocusable(false);
+        icon2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
-        jLabel7.setBackground(new java.awt.Color(169, 210, 254));
-        jLabel7.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(169, 210, 254));
-        jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/inatel/meaw/images/cat-black-face.png"))); // NOI18N
-        jLabel7.setToolTipText("");
-        jLabel7.setFocusable(false);
-        jLabel7.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        icon1.setBackground(new java.awt.Color(169, 210, 254));
+        icon1.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        icon1.setForeground(new java.awt.Color(169, 210, 254));
+        icon1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        icon1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/inatel/meaw/images/cat-black-face.png"))); // NOI18N
+        icon1.setToolTipText("");
+        icon1.setFocusable(false);
+        icon1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
         btnAbrirMusicas.setBackground(new java.awt.Color(169, 210, 254));
         btnAbrirMusicas.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
@@ -391,13 +391,13 @@ public class Playlistview extends javax.swing.JFrame {
                         .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(panelInicialLayout.createSequentialGroup()
-                        .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(icon1, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(41, 41, 41)
-                        .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(title1, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(title2, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(icon2, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(38, 38, 38)
                         .addComponent(btnAbrirMusicas, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(36, 36, 36)
@@ -411,8 +411,8 @@ public class Playlistview extends javax.swing.JFrame {
                 .addGroup(panelInicialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(panelInicialLayout.createSequentialGroup()
                         .addGroup(panelInicialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel7, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(icon1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(icon2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(0, 3, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelInicialLayout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
@@ -421,8 +421,8 @@ public class Playlistview extends javax.swing.JFrame {
                                 .addComponent(btnSair)
                                 .addComponent(btnAbrirMusicas, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelInicialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                .addComponent(title2, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(title1, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addGroup(panelInicialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(painelCadastro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -483,7 +483,7 @@ public class Playlistview extends javax.swing.JFrame {
            tablePlay();
            limparCampos();
         }catch (NumberFormatException e){
-            JOptionPane.showMessageDialog(this, "Insira um id valido!", "ERRO!", JOptionPane.WARNING_MESSAGE);  
+            JOptionPane.showMessageDialog(this, "Insira um id valido!", "ERRO!", JOptionPane.ERROR_MESSAGE);  
         }
     }//GEN-LAST:event_btnDeletarPlayActionPerformed
 
@@ -540,13 +540,11 @@ public class Playlistview extends javax.swing.JFrame {
     private javax.swing.JButton btnReproduzirPlay;
     private javax.swing.JButton btnSair;
     private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.JLabel icon1;
+    private javax.swing.JLabel icon2;
     private javax.swing.JTextField idDelete;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JEditorPane jEditorPane1;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane3;
@@ -559,6 +557,8 @@ public class Playlistview extends javax.swing.JFrame {
     private javax.swing.JTextField reproduzirMusica;
     private javax.swing.JTable tableMusica;
     private javax.swing.JTable tablePlaylist;
+    private javax.swing.JLabel title1;
+    private javax.swing.JLabel title2;
     // End of variables declaration//GEN-END:variables
 
     

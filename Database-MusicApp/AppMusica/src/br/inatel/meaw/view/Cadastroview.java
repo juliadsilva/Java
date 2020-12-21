@@ -52,11 +52,11 @@ public class Cadastroview extends javax.swing.JFrame {
         jTextField1 = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
         jEditorPane1 = new javax.swing.JEditorPane();
-        buttonGroup1 = new javax.swing.ButtonGroup();
+        buttonGroupUser = new javax.swing.ButtonGroup();
         jScrollPane3 = new javax.swing.JScrollPane();
         jTextPane1 = new javax.swing.JTextPane();
         panelInicial = new javax.swing.JPanel();
-        jLabel4 = new javax.swing.JLabel();
+        icon = new javax.swing.JLabel();
         painelCadastro = new javax.swing.JPanel();
         jLabel_NOME = new javax.swing.JLabel();
         jLabel_EMAIL = new javax.swing.JLabel();
@@ -74,7 +74,7 @@ public class Cadastroview extends javax.swing.JFrame {
         jLabel_LOGINSENHA = new javax.swing.JLabel();
         loginsenhaUsuario = new javax.swing.JPasswordField();
         btnLogin = new javax.swing.JButton();
-        jLabel5 = new javax.swing.JLabel();
+        title = new javax.swing.JLabel();
         btnSair = new javax.swing.JButton();
 
         jTextField1.setText("jTextField1");
@@ -89,14 +89,14 @@ public class Cadastroview extends javax.swing.JFrame {
         panelInicial.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         panelInicial.setForeground(new java.awt.Color(255, 255, 255));
 
-        jLabel4.setBackground(new java.awt.Color(204, 0, 153));
-        jLabel4.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(204, 0, 153));
-        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/inatel/meaw/images/cat-black-face.png"))); // NOI18N
-        jLabel4.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-        jLabel4.setFocusable(false);
-        jLabel4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        icon.setBackground(new java.awt.Color(204, 0, 153));
+        icon.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        icon.setForeground(new java.awt.Color(204, 0, 153));
+        icon.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        icon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/inatel/meaw/images/cat-black-face.png"))); // NOI18N
+        icon.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        icon.setFocusable(false);
+        icon.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
         painelCadastro.setBackground(new java.awt.Color(169, 210, 254));
         painelCadastro.setBorder(javax.swing.BorderFactory.createTitledBorder(new javax.swing.border.LineBorder(new java.awt.Color(247, 37, 133), 2, true), "Cadastro", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 1, 16), new java.awt.Color(247, 37, 133))); // NOI18N
@@ -167,7 +167,7 @@ public class Cadastroview extends javax.swing.JFrame {
         );
 
         radioGerenciador.setBackground(new java.awt.Color(169, 210, 254));
-        buttonGroup1.add(radioGerenciador);
+        buttonGroupUser.add(radioGerenciador);
         radioGerenciador.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         radioGerenciador.setForeground(new java.awt.Color(247, 37, 133));
         radioGerenciador.setText("Gerenciador");
@@ -175,7 +175,7 @@ public class Cadastroview extends javax.swing.JFrame {
         radioGerenciador.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
 
         radioUsuario.setBackground(new java.awt.Color(169, 210, 254));
-        buttonGroup1.add(radioUsuario);
+        buttonGroupUser.add(radioUsuario);
         radioUsuario.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         radioUsuario.setForeground(new java.awt.Color(247, 37, 133));
         radioUsuario.setText("Usuário");
@@ -183,7 +183,7 @@ public class Cadastroview extends javax.swing.JFrame {
         radioUsuario.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
 
         radioPremium.setBackground(new java.awt.Color(169, 210, 254));
-        buttonGroup1.add(radioPremium);
+        buttonGroupUser.add(radioPremium);
         radioPremium.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         radioPremium.setForeground(new java.awt.Color(247, 37, 133));
         radioPremium.setText("Usuário Premium");
@@ -266,14 +266,14 @@ public class Cadastroview extends javax.swing.JFrame {
             }
         });
 
-        jLabel5.setBackground(new java.awt.Color(247, 37, 133));
-        jLabel5.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(247, 37, 133));
-        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel5.setText("MEAW");
-        jLabel5.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-        jLabel5.setFocusable(false);
-        jLabel5.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        title.setBackground(new java.awt.Color(247, 37, 133));
+        title.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        title.setForeground(new java.awt.Color(247, 37, 133));
+        title.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        title.setText("MEAW");
+        title.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        title.setFocusable(false);
+        title.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
         btnSair.setBackground(new java.awt.Color(204, 204, 255));
         btnSair.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
@@ -313,16 +313,16 @@ public class Cadastroview extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(btnSair)))
                 .addGap(0, 24, Short.MAX_VALUE))
-            .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(title, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(icon, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         panelInicialLayout.setVerticalGroup(
             panelInicialLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelInicialLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel5)
+                .addComponent(title)
                 .addGap(1, 1, 1)
-                .addComponent(jLabel4)
+                .addComponent(icon)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(painelCadastro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(10, 10, 10)
@@ -386,7 +386,7 @@ public class Cadastroview extends javax.swing.JFrame {
         }catch (EmailInvalidoException e){
             JOptionPane.showMessageDialog(this, "E-mail invalido", tipo, JOptionPane.ERROR_MESSAGE); 
         }catch(CampoVazioException e){
-            JOptionPane.showMessageDialog(this, "Preencha todos os campos.", "Cadastro", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Preencha todos os campos", "Cadastro", JOptionPane.ERROR_MESSAGE);
         }catch (UsuarioExistenteException e){
             JOptionPane.showMessageDialog(this, "E-mail de usuario já existente", "Cadastro", JOptionPane.ERROR_MESSAGE); 
         }   
@@ -436,20 +436,19 @@ public class Cadastroview extends javax.swing.JFrame {
         entradanomeUsuario.setText("");
         entradaemailUsuario.setText("");
         entradasenhaUsuario.setText("");
-        buttonGroup1.clearSelection();
+        buttonGroupUser.clearSelection();
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCadastrarUsuario;
     private javax.swing.JButton btnLogin;
     private javax.swing.JButton btnSair;
-    private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.ButtonGroup buttonGroupUser;
     private javax.swing.JTextField entradaemailUsuario;
     private javax.swing.JTextField entradanomeUsuario;
     private javax.swing.JTextField entradasenhaUsuario;
+    private javax.swing.JLabel icon;
     private javax.swing.JEditorPane jEditorPane1;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel_EMAIL;
     private javax.swing.JLabel jLabel_LOGINEMAIL;
     private javax.swing.JLabel jLabel_LOGINSENHA;
@@ -467,6 +466,7 @@ public class Cadastroview extends javax.swing.JFrame {
     private javax.swing.JRadioButton radioGerenciador;
     private javax.swing.JRadioButton radioPremium;
     private javax.swing.JRadioButton radioUsuario;
+    private javax.swing.JLabel title;
     // End of variables declaration//GEN-END:variables
 
     
