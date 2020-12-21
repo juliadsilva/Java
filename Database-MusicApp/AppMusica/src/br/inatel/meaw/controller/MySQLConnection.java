@@ -29,7 +29,7 @@ public class MySQLConnection {
     private ResultSet result;
     
     //Atributos do Banco
-    String database = "appMusica";
+    String database = "bancoMusica";
     String url = "jdbc:mysql://localhost:3306/" + database + "?useTimezone=true&serverTimezone=UTC&useSSL=false";
     String user = "root";
     String password = "root";
