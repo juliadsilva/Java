@@ -31,6 +31,11 @@ public class Cadastroview extends javax.swing.JFrame {
         this.setLocationRelativeTo(null);
         dtm = (DefaultTableModel) table_Dentista.getModel();
         ler();
+        
+        
+        
+        
+        
     }
 
     /**
